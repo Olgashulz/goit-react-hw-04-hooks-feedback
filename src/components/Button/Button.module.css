@@ -1,0 +1,64 @@
+.button {
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Birthstone', cursive;
+  letter-spacing: 1.5px;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #328a8f;
+  line-height: 0.9em;
+}
+
+.button:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.good::before {
+  content: '';
+  display: block;
+  background: url('../../picture/smile.png') no-repeat;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 0 6px 0 0;
+  position: absolute;
+  top: 5px;
+  right: 105px;
+}
+
+.bad::before {
+  content: '';
+  display: block;
+  background: url('../../picture/unamused.png') no-repeat;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 0 6px 0 0;
+  position: absolute;
+  top: 5px;
+  right: 105px;
+}
+
+.neutral::before {
+  content: '';
+  display: block;
+  background: url('../../picture/rolling-eyes.png') no-repeat;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 0 6px 0 0;
+  position: absolute;
+  top: 5px;
+  right: 105px;
+}
+
+.button:hover {
+  border-bottom: 1px solid white;
+  transition: border-bottom 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.button:active {
+  border-bottom: 1px solid white;
+}

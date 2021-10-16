@@ -4,22 +4,21 @@ import Button from '../Button';
 import styles from './FeedbackOptions.module.css';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
-  // console.log(onLeaveFeedback)
+  // console.log(options)
   return (
     <div className={styles.buttonsBox}>
-      {options.map(textBtn => (
+      {options.map(option => (
         <Button
-          key={textBtn}
-          textBtn={textBtn}
-          // onLeaveFeedback={onLeaveFeedback}
-          onLeaveFeedback={() => onLeaveFeedback(textBtn)}
+          key={option}
+          textBtn={option}
+          onLeaveFeedback={() => onLeaveFeedback(option)}
         />
       ))}
     </div>
   );
 }
 
-FeedbackOptions.propTypes = {
+Button.propTypes = {
   options: PropTypes.array.isRequired,
-  onLeaveFeedback: PropTypes.func.isRequired,
+  onLeaveFeedback: PropTypes.func,
 };
